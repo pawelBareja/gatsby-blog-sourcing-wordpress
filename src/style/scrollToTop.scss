@@ -1,0 +1,57 @@
+.scroll-to-top {
+  position: fixed;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  animation: fadeIn 700ms ease-in-out 1s both;
+  cursor: pointer;
+
+  .scroll__container {
+    padding: 10px 20px;
+    background-color: rgba(26, 26, 26, 0.8);
+    color: #fff;
+    border: 0;
+    position: fixed;
+    right: 10px;
+    bottom: 60px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    font-size: 12px;
+    line-height: 1;
+
+    @media (max-width: 767px) {
+      padding: 10px;
+      height: 40px;
+      bottom: 20px;
+    }
+
+    .arrow {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-content: center;
+      span {
+        font-size: 14px;
+        line-height: 18px;
+        @media (max-width: 767px) {
+          display: none;
+        }
+      }
+      svg {
+        margin-left: 5px;
+        font-size: 18px;
+        @media (max-width: 767px) {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
