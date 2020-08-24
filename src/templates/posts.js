@@ -34,7 +34,7 @@ const IndexPage = ({ data, pathContext }) => {
 "
       />
       <div className="blog__wrapper">
-        <h1 id="anchorForScrolling">Blog</h1>
+        <h1 id="anchorForScrolling">Blog Gatsby API Wordpress</h1>
         <section className="blog__main">
           <section className="posts">
             {group.map(({ node }) => (
