@@ -43,6 +43,11 @@ const IndexPage = ({ data, pathContext }) => {
                 <Link
                   to={node.link.replace("https://blog.barejastudio.pl/", "")}
                 >
+                  <span style={{ lineHeight: "30px" }}>
+                    Przeczytasz w{" "}
+                    <span>{Math.ceil(node.fields.readingTime.minutes)}</span>{" "}
+                    min.
+                  </span>
                   {node.featured_media && (
                     <img
                       src={
@@ -61,11 +66,6 @@ const IndexPage = ({ data, pathContext }) => {
                   to={node.link.replace("https://blog.barejastudio.pl/", "")}
                 >
                   <h3 dangerouslySetInnerHTML={{ __html: node.title }} />
-                  <span style={{ color: "#414141" }}>
-                    Przeczytasz w{" "}
-                    <span>{Math.ceil(node.fields.readingTime.minutes)}</span>{" "}
-                    min.
-                  </span>
                 </Link>
 
                 <div

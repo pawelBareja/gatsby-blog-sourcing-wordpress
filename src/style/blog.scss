@@ -1,14 +1,17 @@
+@import "colors";
+
 .blog__wrapper {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   width: 100%;
-  padding: 0 30px 50px;
+  padding: 0;
   max-width: 1500px;
   margin: 0 auto;
   .posts {
     width: 95%;
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -16,28 +19,36 @@
     flex-wrap: wrap;
 
     .post {
+      background: $lightDark;
+      color: $lightGray;
       margin: 10px;
       width: 30%;
       min-width: 300px;
       height: auto;
-      -webkit-box-shadow: 0px 3px 5px 0px rgba(107, 105, 107, 1);
-      -moz-box-shadow: 0px 3px 5px 0px rgba(107, 105, 107, 1);
-      box-shadow: 0px 3px 5px 0px rgba(107, 105, 107, 1);
+      box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.2),
+        0px 3px 4px 0px rgba(0, 0, 0, 0.14),
+        0px 3px 3px -2px rgba(0, 0, 0, 0.12);
       border-radius: 5px;
       padding: 10px;
 
+      a {
+        color: $blue;
+        text-decoration: none;
+
+        h3 {
+          color: $white;
+        }
+      }
       .post__excerpt {
         margin-top: 20px;
       }
 
       .post__cta {
         text-decoration: underline;
-        color: #4e96f8;
       }
 
       .post__cta:hover {
         text-decoration: none;
-        color: #444;
       }
       img {
         max-width: 100%;
@@ -86,6 +97,8 @@
 .pagination {
   width: 100%;
   max-width: 500px;
+  margin: 0 auto;
+  padding-top: 50px;
   flex-wrap: wrap;
   display: flex;
   flex-direction: row;
@@ -158,6 +171,7 @@
   }
 
   &:after {
+    background: $green;
     display: inline-block;
     position: fixed;
     top: 80px;
@@ -171,8 +185,7 @@
     width: 200px;
     border-radius: 10px 10px 0 0;
     padding: 5px 10px;
-    background: gray;
-    color: #fff;
+    color: $lightDark;
     text-align: center;
   }
 }

@@ -1,37 +1,63 @@
+@import "colors";
+
+#anchorForScrolling {
+  background: $lightDark;
+  padding: 5px 20px;
+  border-radius: 5px;
+}
+
 .navbar {
-  z-index: 100;
+  z-index: 10;
   margin: 0 auto;
   width: 99%;
   padding: 10px;
   position: fixed;
-  background: #fff;
-  -webkit-box-shadow: 0px 4px 5px 0px rgba(148, 142, 148, 1);
-  -moz-box-shadow: 0px 4px 5px 0px rgba(148, 142, 148, 1);
-  box-shadow: 0px 4px 5px 0px rgba(148, 142, 148, 1);
+  background: $dark;
+  box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.2),
+    0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 3px 3px -2px rgba(0, 0, 0, 0.12);
   top: 0;
   height: 50px;
+  left: 0;
+  transition: 1s;
 }
 
-.navbar--hidden {
-  z-index: 100;
-  width: 99%;
-  padding: 10px;
-  background: #fff;
-  position: fixed;
-  -webkit-box-shadow: 0px 4px 5px 0px rgba(148, 142, 148, 1);
-  -moz-box-shadow: 0px 4px 5px 0px rgba(148, 142, 148, 1);
-  box-shadow: 0px 4px 5px 0px rgba(148, 142, 148, 1);
-  transition: 1s;
-  transform: translateY(50px) 1s;
-  height: 50px;
+.hide {
+  // z-index: 100;
+  // width: 99%;
+  // padding: 10px;
+  // background: #fff;
+  // position: fixed;
+  // -webkit-box-shadow: 0px 4px 5px 0px rgba(148, 142, 148, 1);
+  // -moz-box-shadow: 0px 4px 5px 0px rgba(148, 142, 148, 1);
+  // box-shadow: 0px 4px 5px 0px rgba(148, 142, 148, 1);
+  // transition: 1s;
+  transform: translateY(-80px);
+  // -webkit-transform: translateY(-80px);
+  // height: 50px;
+  // left: 0;
 }
 
 body {
+  color: $white;
+  background: $extraDark;
   font-family: "Montserrat", sans-serif;
   line-height: 1.6;
 
   .spacer__top {
     height: 96px;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    a {
+      color: $lightGray;
+    }
+
+    a {
+      text-decoration: none;
+    }
   }
 
   .container {
@@ -72,4 +98,9 @@ body {
     background: gray;
     // top: -50px;
   }
+}
+
+footer {
+  margin-top: 50px;
+  text-align: center;
 }
