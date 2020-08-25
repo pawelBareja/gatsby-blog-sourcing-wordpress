@@ -66,34 +66,9 @@ import "../style/layout.scss"
 import "../style/layout.scss"
 
 export default class Header extends Component {
-  state = {
-    prevScrollpos: window.pageYOffset,
-    visible: true,
-  }
-
-  handleScroll = () => {
-    const { prevScrollpos } = this.state
-
-    const currentScrollPos = window.pageYOffset
-    const visible = prevScrollpos > currentScrollPos
-
-    this.setState({
-      prevScrollpos: currentScrollPos,
-      visible,
-    })
-  }
-
-  componentDidMount() {
-    window.addEventListener("scroll", this.handleScroll)
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener("scroll", this.handleScroll)
-  }
-
   render() {
     return (
-      <nav className={this.state.visible ? "navbar" : "navbar-hidden"}>
+      <nav className="navbar">
         <a href="#">Item 1</a>
         <a href="#">Item 2</a>
         <a href="#">Item 3</a>
