@@ -1,9 +1,10 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 
 import Img from "gatsby-image"
 import Layout from "../components/layout"
 import LastPostsMenu from "../components/LastPostsMenu"
 import SEO from "../components/seo"
+import ViewCounter from "../components/ViewCounter"
 
 // style
 import "../style/blog.scss"
@@ -13,11 +14,7 @@ const PostTemplate = props => {
 
   const post = props.data.wordpressPost
   const data = props.data
-
-  // const metaTitle = this.props.data.wordpressPost.acf.meta_tytul
-  // const metaDescription = this.props.data.wordpressPost.acf.meta_opis
-  // console.log(metaTitle)
-  // console.log(metaDescription)
+  console.log(props.data.wordpressPost)
 
   return (
     <Layout>
@@ -43,6 +40,7 @@ const PostTemplate = props => {
             <LastPostsMenu />
           </div>
         </section>
+        <ViewCounter id={post.id} />
       </div>
     </Layout>
   )
@@ -65,6 +63,7 @@ export const pageQuery = graphql`
           }
         }
       }
+      id
     }
     site {
       siteMetadata {
