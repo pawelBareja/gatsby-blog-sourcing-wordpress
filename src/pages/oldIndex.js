@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 import LastPostsMenu from "../components/blog/BlogMenu"
+import Footer from "../components/footer/Footer"
 
 // css
 import "../style/layout.scss"
@@ -37,6 +38,7 @@ export default ({ data }) => {
           </p>
         </div>
       </div>
+      <Footer />
     </Layout>
   )
 }
