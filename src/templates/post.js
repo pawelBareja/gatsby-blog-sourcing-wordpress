@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import LastPostsMenu from "../components/LastPostsMenu"
 import SEO from "../components/seo"
 import ViewCounter from "../components/ViewCounter"
+import ReadComments from "../components/comments/ReadComments"
 
 // style
 import "../style/blog.scss"
@@ -41,6 +42,7 @@ const PostTemplate = props => {
           </div>
         </section>
         <ViewCounter id={post.id} />
+        <ReadComments slug={`post ${post.id}`} />
       </div>
     </Layout>
   )

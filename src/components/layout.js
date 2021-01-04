@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import ProgressBar from "../components/ProgressBar"
 import ScrollToTop from "../components/ScrollToTop"
+// import PageTitleToogle from "../components/PageTitleToogle/PageTitleToogle"
 
 // style
 // import "./layout.css"
@@ -41,6 +42,7 @@ const Layout = ({ children }) => {
         <main>{children}</main>
         <ProgressBar />
         <ScrollToTop />
+        {/* <PageTitleToogle /> */}
         <footer>
           © {new Date().getFullYear()}, Built with
           {` `}
